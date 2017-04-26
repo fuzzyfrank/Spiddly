@@ -107,10 +107,9 @@ public class Shield implements Weapon {
 				add("Fire");
 				add("Water");
 				add("Earth");
-				add("Air");
 			}
 		};
-		int elmt = ThreadLocalRandom.current().nextInt(0, 4);
+		int elmt = ThreadLocalRandom.current().nextInt(0, 3);
 		return elements.get(elmt);
 	}
 
