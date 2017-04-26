@@ -1,3 +1,4 @@
+package Entities;
 /**
  * Describes the player character.
  *

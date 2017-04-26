@@ -1,3 +1,5 @@
+package Items;
+import Entities.Entity;
 
 /**
  * TODO Put here a description of what this class does.

@@ -1,3 +1,7 @@
+import Equippables.Dagger;
+import Equippables.Ring;
+import Equippables.Shield;
+import Equippables.Sword;
 
 public class Main {
 

@@ -1,7 +1,8 @@
+package Equippables;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Dagger implements Weapon {
+public class Sword implements Weapon {
 
 	String noun = this.generateNouns();
 	String verb = this.generateVerbs();
@@ -16,22 +17,22 @@ public class Dagger implements Weapon {
 
 	@Override
 	public int generateAttack() {
-		int i = ThreadLocalRandom.current().nextInt(20, 70);
+		int i = ThreadLocalRandom.current().nextInt(40, 90);
 		if (this.legendary == true) {
-			return i * 2;
+			return i * 3;
 		}
-		return i;
+		return i * 2;
 	}
 
 	@Override
 	public String generateDescription() {
 		int i = ThreadLocalRandom.current().nextInt(0, 3);
 		if (i == 0) {
-			return "The " + this.adj + " dagger " + this.verb + " with " + this.noun + ".";
+			return "The " + this.adj + " sword " + this.verb + " with " + this.noun + ".";
 		} else if (i == 1) {
-			return "You can feel that the " + this.adj + " dagger " + this.verb + " with " + this.noun + ".";
+			return "You can feel that the " + this.adj + " sword " + this.verb + " with " + this.noun + ".";
 		} else if (i == 2) {
-			return "A plain looking dagger.";
+			return "A plain looking sword.";
 		}
 		return "NoDescGenerated";
 	}
@@ -101,7 +102,7 @@ public class Dagger implements Weapon {
 
 	@Override
 	public String weaponType() {
-		return "Dagger";
+		return "Sword";
 	}
 
 	@Override
@@ -119,11 +120,7 @@ public class Dagger implements Weapon {
 
 	@Override
 	public int generateDefense() {
-		int i = ThreadLocalRandom.current().nextInt(40, 90);
-		if (this.legendary == true) {
-			return i * 2;
-		}
-		return i;
+		return 0;
 	}
 
 }

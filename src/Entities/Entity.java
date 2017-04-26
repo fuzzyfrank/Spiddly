@@ -1,5 +1,8 @@
+package Entities;
 import java.util.ArrayList;
 
+import Equippables.Weapon;
+import Items.Item;
 /**
  * All the enemies and the players.
  *
@@ -14,13 +17,9 @@ public abstract class Entity {
 	protected int wis;
 	protected int cha;
 	protected double health;
-
-	
-	
-	protected Weapon weapon;
-	protected ArrayList<Item> Inventory;
+	protected Weapon weapon1;
+	protected ArrayList<Item> inventory;
 	protected Weapon weapon2;
-	
 	
 	public abstract void setHealth();
 	

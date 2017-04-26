@@ -1,3 +1,4 @@
+package Equippables;
 public interface Weapon {
 
 	String name = "DefaultWeapon";

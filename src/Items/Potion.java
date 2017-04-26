@@ -1,3 +1,5 @@
+package Items;
+import Entities.Entity;
 
 /**
  * Potions can either heal or deal damage to a target
