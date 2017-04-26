@@ -7,6 +7,7 @@ public interface Monster {
 	String element = "DefaultElement";
 	int health = 1;
 	int evasion = 1;
+	boolean isDead = false;
 
 	public abstract int generateAttack();
 
@@ -16,7 +17,9 @@ public interface Monster {
 
 	public abstract String monsterType();
 
-	public abstract int injure(int damage);
+	public abstract void injure(int damage);
 	
 	public abstract int attack(int damage);
+	
+	public abstract boolean checkDead();
 }

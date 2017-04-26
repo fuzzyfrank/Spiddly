@@ -26,6 +26,6 @@ public interface Armor {
 	
 	public abstract String generateAdj();
 	
-	public abstract String weaponType();
+	public abstract String armorType();
 	
 }

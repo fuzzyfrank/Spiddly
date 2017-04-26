@@ -8,7 +8,7 @@ public class Shield implements Armor {
 	String adj = this.generateAdj();
 	boolean legendary = this.generateLegenday();
 	String legendaryMarker = "<LEGENDARY>";
-	String name = this.weaponType();
+	String name = this.armorType();
 	double attack = this.generateAttack();
 	double defense = this.generateDefense();
 	String description = this.generateDescription();
@@ -94,7 +94,7 @@ public class Shield implements Armor {
 	}
 
 	@Override
-	public String weaponType() {
+	public String armorType() {
 		return "Shield";
 	}
 
