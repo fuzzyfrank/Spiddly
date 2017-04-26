@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Ring implements Weapon {
+public class Ring implements Armor {
 
 	String noun = this.generateNouns();
 	String verb = this.generateVerbs();
@@ -11,7 +11,6 @@ public class Ring implements Weapon {
 	String name = this.weaponType();
 	double attack = this.generateAttack();
 	double defense = this.generateDefense();
-	String element = this.setElement();
 	String description = this.generateDescription();
 
 	@Override
@@ -36,10 +35,9 @@ public class Ring implements Weapon {
 	public void generateWeapon() {
 		if (this.legendary == true) {
 			System.out.println(this.legendaryMarker + "[" + this.name + "][Atk: " + this.attack + " | Def: "
-					+ this.defense + " | Elmt: " + this.element + " | Desc: " + this.description + "]");
+					+ this.defense + " | Desc: " + this.description + "]");
 		} else {
-			System.out.println("[" + this.name + "][Atk: " + this.attack + " | Def: " + this.defense + " | Elmt: "
-					+ this.element + " | Desc: " + this.description + "]");
+			System.out.println("[" + this.name + "][Atk: " + this.attack + " | Def: " + this.defense + " | Desc: " + this.description + "]");
 		}
 	}
 
@@ -98,19 +96,6 @@ public class Ring implements Weapon {
 	@Override
 	public String weaponType() {
 		return "Ring";
-	}
-
-	@Override
-	public String setElement() {
-		ArrayList<String> elements = new ArrayList<String>() {
-			{
-				add("Fire");
-				add("Water");
-				add("Earth");
-			}
-		};
-		int elmt = ThreadLocalRandom.current().nextInt(0, 3);
-		return elements.get(elmt);
 	}
 
 	@Override
