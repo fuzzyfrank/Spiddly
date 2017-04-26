@@ -10,7 +10,7 @@ public class Main {
 		testRing.generateWeapon();
 		Shield testShield = new Shield();
 		testShield.generateWeapon();
-		//This is a comment.  hi from gordon
+		//This is a comment.  hi from gordon Hello again
 	}
 	
 }
