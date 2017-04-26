@@ -16,11 +16,26 @@ public abstract class Entity {
 	protected int intel;
 	protected int wis;
 	protected int cha;
-	protected double health;
+	protected int health;
 	protected Weapon weapon1;
 	protected ArrayList<Item> inventory;
 	protected Weapon weapon2;
 	
-	public abstract void setHealth();
+	public abstract void resetHealth();
+
+	public void setHealth(int newHealth){
+		this.health = newHealth;
+	}
+	public void equip(Weapon weapon){
+		this.weapon1 = weapon;
+	}
+	public void doDamage(Entity entity){
+		entity.setHealth(entity.health - weapon1.generateAttack());
+	}
+
+	public int getHealth() {
+		// TODO Auto-generated method stub.
+		return this.health;
+	}
 	
 }

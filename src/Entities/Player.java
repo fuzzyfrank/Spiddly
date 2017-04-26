@@ -1,4 +1,5 @@
 package Entities;
+
 /**
  * Describes the player character.
  *
@@ -14,11 +15,13 @@ public class Player extends Entity{
 		this.intel = 8;
 		this.wis = 8;
 		this.cha = 8;
-		setHealth();
+		resetHealth();
 	}
 	
-	public void setHealth(){
-		 this.health = (Math.random() + 1)*250 + 12*this.str + 25*this.con;
+	public void resetHealth(){
+		 this.health = (int)((Math.random() + 1)*250 + 12*this.str + 25*this.con);
 	}
+	
+
 	
 }
